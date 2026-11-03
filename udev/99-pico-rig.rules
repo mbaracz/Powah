@@ -1,0 +1,4 @@
+# Raspberry Pi Pico running MicroPython (USB CDC), the power-cycle rig controller.
+# Gives your user access to the Pico and creates the /dev/pico-rig symlink the host scripts use by default.
+# Set OWNER to your user name.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0005", MODE="0660", OWNER="username", SYMLINK+="pico-rig"
